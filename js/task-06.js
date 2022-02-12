@@ -1,11 +1,11 @@
 const inputData = document.querySelector('#validation-input');
-const maxLength = inputData.getAttribute('data-length')
+const dataLength = inputData.getAttribute('data-length')
 
 
 const handleInput = event => {
     inputData.classList.remove('valid', 'invalid')
 
-    if (event.currentTarget.value.length <= maxLength) {
+    if (event.currentTarget.value.length === Number(dataLength)) {
         inputData.classList.add('valid') 
     }
     else {
